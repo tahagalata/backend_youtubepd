@@ -10,9 +10,7 @@ app.use(express.json());
 
 
 app.post('/', (req, res) => {
-  // youtube(req.body.url).then(videoList => res.json(videoList))
-  console.log(req.body)
-  res.json(req.body)
+  youtube(req.body.url).then(videoList => res.json(videoList))
 })
 
 app.listen(port, () => {
