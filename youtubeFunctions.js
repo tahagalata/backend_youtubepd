@@ -47,7 +47,7 @@ const getVideoDetails = async videoIds => {
 }
 
 const isoToSeconds = isodur => {
-  let arr = isodur.split(/(H|M|S|P|T)/)
+  let arr = isodur.split(/(H|M|S|P|T|D)/)
   let seconds = arr.includes('S') ? parseInt(arr[arr.indexOf('S')-1]) : 0
   let minutes = arr.includes('M') ? parseInt(arr[arr.indexOf('M')-1]) : 0
   let hours = arr.includes('H') ? parseInt(arr[arr.indexOf('H')-1]) : 0
